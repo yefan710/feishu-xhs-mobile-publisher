@@ -1,0 +1,25 @@
+{
+  "name": "feishu-xhs-mobile-publisher",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Feishu Bitable material selection and mobile Xiaohongshu handoff",
+  "license": "Apache-2.0",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node src/server.cjs",
+    "demo": "node src/server.cjs --demo",
+    "setup": "node scripts/setup.cjs",
+    "create-user": "node scripts/create-user.cjs",
+    "check:feishu": "node scripts/check-feishu.cjs",
+    "doctor": "node scripts/doctor.cjs",
+    "test": "node --test tests/*.test.cjs"
+  },
+  "dependencies": {
+    "axios": "^1.13.1",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.3"
+  }
+}

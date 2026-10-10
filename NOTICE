@@ -1,0 +1,17 @@
+Experimental Xiaohongshu mobile handoff payload
+
+Adapted from Aixuangit/Lumi, an independently maintained derivative of ZJU-REAL/Easel.
+Upstream: https://github.com/Aixuangit/Lumi
+File: lumi/xhs_qr_preview.html
+Git blob: 3d5f0c1e1a87c92f82b9037875333cc72af38d7f
+License: Apache License 2.0 (see lumi-LICENSE.txt).
+
+Changes made on 2026-10-09: extracted an image-only route builder, added HTTPS
+validation and platform selection, connected to the standalone mobile publisher.
+No upstream project software is installed or executed.
+
+This is an unofficial protocol experiment. It is not endorsed by Xiaohongshu,
+Lumi, Easel or their authors. Generating a route is not proof of App acceptance,
+field prefill or note publication.
+
+Standalone packaging and configuration mapping added in 2026.

@@ -1,0 +1,5 @@
+{$APP_DOMAIN} {
+    encode gzip
+    reverse_proxy app:3000
+    # No access log by default: media URLs contain bearer capabilities.
+}

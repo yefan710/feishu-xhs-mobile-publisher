@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+!.env.example
+data/
+logs/
+work/
+coverage/
+*.log
+*.pem
+*.key
+*.p12
+config/feishu.json
+.DS_Store

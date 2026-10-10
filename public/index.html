@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>飞书素材发布</title>
+  <link rel="stylesheet" href="./test.css?v=20261010-android1">
+  <script src="./direct-route.js?v=20261010-android1" defer></script>
+  <script src="./request.js?v=20261010-compat1" defer></script>
+  <script src="./queue.js?v=20261010-android1" defer></script>
+</head>
+<body>
+  <main>
+    <header><a href="./">发布工作台</a><span>飞书素材 · 手机发布</span></header>
+    <section class="intro"><p class="eyebrow">MOBILE PUBLISH</p><h1>飞书素材发布</h1>
+      <p>选择账号和 JW 编号，预览素材后带入小红书。</p>
+    </section>
+    <section id="queue-login" class="card" hidden><h2>登录发布工作台</h2>
+      <p class="hint">使用发布工作台账号，登录后读取飞书素材。</p>
+      <form id="queue-login-form"><label for="queue-username">登录账号</label><input id="queue-username" autocomplete="username" required>
+        <label for="queue-password">密码</label><input id="queue-password" type="password" autocomplete="current-password" required>
+        <button id="queue-login-button" class="primary" type="submit">登录并读取飞书</button></form>
+    </section>
+    <div id="queue-notice" class="notice" role="status">正在连接飞书发布表…</div>
+    <section id="queue-panel" class="card" hidden><div class="card-heading"><h2>筛选待发布素材</h2><button id="queue-refresh" class="quiet">刷新飞书</button></div>
+      <div class="filters"><div><label for="queue-account">发布账号</label><select id="queue-account"><option value="">全部账号</option></select></div>
+        <div><label for="queue-jw">JW 编号</label><select id="queue-jw"><option value="">全部编号</option></select></div>
+        <div><label for="queue-status">发布状态</label><select id="queue-status"><option value="否" selected>否 · 未发布</option><option value="是">是 · 已发布</option><option value="all">全部状态</option></select></div></div>
+      <p id="queue-count" class="hint"></p><div id="queue-list" class="queue-list"></div>
+      <button id="queue-logout" class="quiet">退出登录</button>
+    </section>
+    <section id="queue-detail" class="card" hidden><p id="queue-identity" class="eyebrow"></p><h2 id="queue-title"></h2>
+      <div class="badges"><span id="queue-record-status"></span><span id="queue-media-count"></span></div>
+      <div id="queue-images" class="previews" aria-label="飞书素材预览"></div>
+      <label>正文</label><p id="queue-body" class="note-body"></p><label>标签</label><p id="queue-tags" class="note-body"></p>
+      <label for="queue-platform">手机路线</label><select id="queue-platform"><option value="auto">自动识别手机</option><option value="ios">iPhone / iPad</option><option value="android">安卓 · 兼容模式</option><option value="android_scheme">安卓 · 备用模式</option></select>
+      <p class="hint">先在小红书登录上方对应账号。这里的账号筛选分配素材，不会切换 App 账号。</p>
+      <a id="queue-publish" class="primary launch-link" role="button" aria-disabled="true" tabindex="-1">发布 · 带入小红书并回写为是</a>
+      <p class="hint">安卓未打开 App 或出现资源下载时，请先取消下载并恢复状态为“否”，再选择“安卓 · 备用模式”重试。仍失败可在 Chrome 打开同一网址测试。无需下载 Lumi 文件。</p>
+      <p class="hint">按此工作台规则，点击即将飞书“是否发布”写为“是”。请在小红书核对素材并完成最后发布；若取消或导入失败，可恢复为“否”。图片交接链接有效期 2 小时。</p>
+      <details><summary>状态纠正与备用操作</summary><button id="queue-mark" class="secondary">已手动发布 · 标记为是</button>
+        <button id="queue-undo" class="secondary">取消 / 失败 · 恢复为否</button><button id="queue-copy" class="secondary">复制正文和标签</button></details>
+    </section>
+    <footer class="hint"><a href="./source.html">协议来源与许可证</a> · 需要在手机完成最终发布</footer>
+  </main>
+</body>
+</html>
